@@ -8,7 +8,7 @@ using namespace Rcpp;
 
 // ensureInitialized
 void ensureInitialized();
-RcppExport SEXP later_ensureInitialized() {
+RcppExport SEXP _later_ensureInitialized() {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     ensureInitialized();
@@ -17,7 +17,7 @@ END_RCPP
 }
 // saveNframesCallback
 void saveNframesCallback(SEXP exp);
-RcppExport SEXP later_saveNframesCallback(SEXP expSEXP) {
+RcppExport SEXP _later_saveNframesCallback(SEXP expSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< SEXP >::type exp(expSEXP);
@@ -27,7 +27,7 @@ END_RCPP
 }
 // execCallbacks
 bool execCallbacks();
-RcppExport SEXP later_execCallbacks() {
+RcppExport SEXP _later_execCallbacks() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -35,9 +35,19 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// idle
+bool idle();
+RcppExport SEXP _later_idle() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(idle());
+    return rcpp_result_gen;
+END_RCPP
+}
 // execLater
 void execLater(Rcpp::Function callback, double delaySecs);
-RcppExport SEXP later_execLater(SEXP callbackSEXP, SEXP delaySecsSEXP) {
+RcppExport SEXP _later_execLater(SEXP callbackSEXP, SEXP delaySecsSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< Rcpp::Function >::type callback(callbackSEXP);
