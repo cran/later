@@ -3,10 +3,12 @@
 
 #include <stdexcept>
 #include <sys/time.h>
-extern "C" {
-#include "tinycthread.h"
-}
 #include <boost/noncopyable.hpp>
+#include <boost/type_traits/is_integral.hpp>
+#include <boost/type_traits/is_signed.hpp>
+
+#include "tinycthread.h"
+#include "timeconv.h"
 
 #ifndef CLOCK_REALTIME
 // This is only here to prevent compilation errors on Windows and older
@@ -86,6 +88,15 @@ class ConditionVariable : boost::noncopyable {
   
 public:
   ConditionVariable(Mutex& mutex) : _m(&mutex._m) {
+    // If time_t isn't integral, our addSeconds logic needs to change,
+    // as it relies on casting to time_t being a truncation.
+    if (!boost::is_integral<time_t>::value)
+      throw std::runtime_error("Integral time_t type expected");
+    // If time_t isn't signed, our addSeconds logic can't handle
+    // negative values for secs.
+    if (!boost::is_signed<time_t>::value)
+      throw std::runtime_error("Signed time_t type expected");
+    
     if (cnd_init(&_c) != thrd_success)
       throw std::runtime_error("Condition variable failed to initialize");
   }
@@ -116,17 +127,9 @@ public:
     if (clock_gettime(CLOCK_REALTIME, &ts) != 0) {
       throw std::runtime_error("clock_gettime failed");
     }
-    ts.tv_sec += (time_t)timeoutSecs;
-    ts.tv_nsec += (timeoutSecs - (time_t)timeoutSecs) * 1e9;
-    if (ts.tv_nsec < 0) {
-      ts.tv_nsec += 1e9;
-      ts.tv_sec--;
-    }
-    if (ts.tv_nsec > 1e9) {
-      ts.tv_nsec -= 1e9;
-      ts.tv_sec++;
-    }
     
+    ts = addSeconds(ts, timeoutSecs);
+
     int res = cnd_timedwait(&_c, _m, &ts);
     if (res == thrd_success) {
       return true;

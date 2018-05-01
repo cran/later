@@ -1,7 +1,7 @@
 Package: later
 Type: Package
 Title: Utilities for Delaying Function Execution
-Version: 0.7.1
+Version: 0.7.2
 Authors@R: c(
     person("Joe", "Cheng", role = c("aut", "cre"), email = "joe@rstudio.com"),
     person(family = "RStudio", role = "cph"),
@@ -19,7 +19,7 @@ RoxygenNote: 6.0.1
 Suggests: knitr, rmarkdown, testthat
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2018-03-01 21:02:42 UTC; jcheng
+Packaged: 2018-05-01 18:50:54 UTC; jcheng
 Author: Joe Cheng [aut, cre],
   RStudio [cph],
   Marcus Geelnard [ctb, cph] (TinyCThread library,
@@ -28,4 +28,4 @@ Author: Joe Cheng [aut, cre],
     https://tinycthread.github.io/)
 Maintainer: Joe Cheng <joe@rstudio.com>
 Repository: CRAN
-Date/Publication: 2018-03-07 11:13:08 UTC
+Date/Publication: 2018-05-01 22:13:04 UTC

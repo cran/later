@@ -22,6 +22,7 @@ freely, subject to the following restrictions:
 */
 
 #include "tinycthread.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /* Platform specific includes */
