@@ -4,6 +4,7 @@
 #include "debug.h"
 
 #include "callback_registry.h"
+#include "interrupt.h"
 
 // For debug.h
 #if defined(DEBUG_THREAD)
@@ -30,22 +31,28 @@ public:
 };
 
 // Returns number of frames on the call stack. Basically just a wrapper for
-// base::sys.nframe().
+// base::sys.nframe(). Note that this can report that an error occurred if the
+// user sends an interrupt while the `sys.nframe()` function is running. I
+// believe that the only reason that it should set errorOccurred is because of
+// a user interrupt.
 int sys_nframe() {
   ASSERT_MAIN_THREAD()
   SEXP e, result;
   int errorOccurred, value;
 
-  PROTECT(e = Rf_lang1(Rf_install("sys.nframe")));
-  PROTECT(result = R_tryEval(e, R_BaseEnv, &errorOccurred));
+  BEGIN_SUSPEND_INTERRUPTS {
+    PROTECT(e = Rf_lang1(Rf_install("sys.nframe")));
+    PROTECT(result = R_tryEval(e, R_BaseEnv, &errorOccurred));
 
-  if (errorOccurred) {
-    value = -1;
-  } else {
-    value = INTEGER(result)[0];
-  }
+    if (errorOccurred) {
+      value = -1;
+    } else {
+      value = INTEGER(result)[0];
+    }
 
-  UNPROTECT(2);
+    UNPROTECT(2);
+  } END_SUSPEND_INTERRUPTS;
+
   return value;
 }
 

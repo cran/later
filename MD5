@@ -1,7 +1,7 @@
-ba8577a5645a5060a5aaa5646244e27c *DESCRIPTION
+61d81b0658151dfca196f8ed709d9b44 *DESCRIPTION
 75d68761a7804895a64b8af00fe03bf4 *LICENSE.note
 a61a4f9573261df4683af4d1bb0821b8 *NAMESPACE
-64f741941c5dad552c2de804ba18d118 *NEWS.md
+8c4ba8f678e7abcd3f3acdb93ee0c6b9 *NEWS.md
 fcda4768ebb5ff7e0497799b03721e69 *R/RcppExports.R
 e29ede24383cde06ab578cb3b8c843af *R/later.R
 ec0d146620f0a6071241098cb813b05c *README.md
@@ -22,7 +22,8 @@ a59278879f048c7e7466b7bc55fa960c *man/next_op_secs.Rd
 21c1284b2473b128389cc898bc2da2ad *src/callback_registry.h
 01e40d134d7c438eb6495de2e627b715 *src/debug.h
 e37137a0533ebceaf32f5c75fa962804 *src/init.c
-09b7308640f388a78740887f8b1d5fbc *src/later.cpp
+56792fc6e11c596d958add3d2ce86743 *src/interrupt.h
+c48e35ccdd1e5c33aa6100505cace605 *src/later.cpp
 74456664b74c61e12794cdd833e205dd *src/later.h
 cf1eb8ffcf2851141d5ae9bb94a8481b *src/later_native.cpp
 88299e56da452c82196fd4dc7a28afd2 *src/later_posix.cpp
