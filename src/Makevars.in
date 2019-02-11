@@ -1,7 +1,0 @@
-PKG_CPPFLAGS = -pthread @cppflags@
-PKG_LIBS = -pthread @libs@
-
-# Uncomment to enable thread assertions
-# PKG_CPPFLAGS += -DDEBUG_THREAD -UNDEBUG
-
-$(SHLIB): @libs@

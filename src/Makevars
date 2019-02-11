@@ -1,0 +1,8 @@
+# Use C++11 if available
+CXX_STD=CXX11
+
+PKG_CPPFLAGS = -pthread
+PKG_LIBS = -pthread
+
+# Uncomment to enable thread assertions
+# PKG_CPPFLAGS += -DDEBUG_THREAD -UNDEBUG
