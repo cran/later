@@ -2,11 +2,11 @@ Package: later
 Type: Package
 Title: Utilities for Scheduling Functions to Execute Later with Event
         Loops
-Version: 1.1.0.1
+Version: 1.2.0
 Authors@R: c(
-    person("Joe", "Cheng", role = c("aut", "cre"), email = "joe@rstudio.com"),
+    person("Winston", "Chang", role = c("aut", "cre"), email = "winston@rstudio.com"),
+    person("Joe", "Cheng", role = c("aut"), email = "joe@rstudio.com"),
     person(family = "RStudio", role = "cph"),
-    person("Winston", "Chang", role = c("aut"), email = "winston@rstudio.com"),
     person("Marcus", "Geelnard", role = c("ctb", "cph"), comment = "TinyCThread library, https://tinycthread.github.io/"),
     person("Evan", "Nemerson", role = c("ctb", "cph"), comment = "TinyCThread library, https://tinycthread.github.io/")
     )
@@ -15,21 +15,22 @@ Description: Executes arbitrary R or C functions some time after the current
     in an event loop.
 URL: https://github.com/r-lib/later
 BugReports: https://github.com/r-lib/later/issues
-License: GPL (>= 2)
+License: MIT + file LICENSE
 Imports: Rcpp (>= 0.12.9), rlang
-LinkingTo: Rcpp, BH
-RoxygenNote: 7.1.0
-Suggests: knitr, rmarkdown, testthat
+LinkingTo: Rcpp
+RoxygenNote: 7.1.1
+SystemRequirements: C++11
+Suggests: knitr, rmarkdown, testthat (>= 2.1.0)
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2020-06-02 13:23:01 UTC; winston
-Author: Joe Cheng [aut, cre],
+Packaged: 2021-04-20 19:31:00 UTC; winston
+Author: Winston Chang [aut, cre],
+  Joe Cheng [aut],
   RStudio [cph],
-  Winston Chang [aut],
   Marcus Geelnard [ctb, cph] (TinyCThread library,
     https://tinycthread.github.io/),
   Evan Nemerson [ctb, cph] (TinyCThread library,
     https://tinycthread.github.io/)
-Maintainer: Joe Cheng <joe@rstudio.com>
+Maintainer: Winston Chang <winston@rstudio.com>
 Repository: CRAN
-Date/Publication: 2020-06-05 10:10:13 UTC
+Date/Publication: 2021-04-23 15:20:02 UTC
