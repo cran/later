@@ -1,3 +1,11 @@
+# later 1.3.2
+
+* Fixed `unused variable` compiler warning. (@MichaelChirico, #176)
+
+* Fixed #177: The order of includes in `later.h` could cause compilation errors on some platforms. (@jeroen, #178)
+
+* Closed #181: Fix R CMD check warning re error() format strings (for r-devel). (#133)
+
 # later 1.3.1
 
 * For C function declarations that take no parameters, added `void` parameter. (#172)
