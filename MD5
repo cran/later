@@ -1,8 +1,8 @@
-954f8cc9741ae57321f662ae0f95e0a5 *DESCRIPTION
+62a8f37cd5cc59f3e32f0c8af4e74b5f *DESCRIPTION
 1ea92efbfee0a5419e05c8bffb4d02d7 *LICENSE
 0cc41b0056bcd20eabacbf9459223b54 *LICENSE.note
 ba7fe76c271ba4447a3d13920bade45e *NAMESPACE
-8d8136a78e2ce9c1bcc58b940bea6f79 *NEWS.md
+837c6e4d6274e3f9a690bedb1d64d00e *NEWS.md
 430f31c4d897938fc225a83fa680ee64 *R/RcppExports.R
 ed3c7ae2148e29b8839502954bf559b0 *R/debug.R
 e15032d95c3a2e67267c3b65c0087db1 *R/later.R
@@ -12,8 +12,8 @@ e76106957220041598f804fb0515c396 *build/vignette.rds
 793c150da12198c9c0a2c8e5811e721d *configure
 c37ad0d619d6d8eceb3fd7628b145b68 *inst/bgtest.cpp
 88133661f44a9f8a51e06a1d8b044372 *inst/doc/later-cpp.Rmd
-c00ba9bb0ab45cf5ab19526ef306532b *inst/doc/later-cpp.html
-7135fe38e6fc5dc9d5db0910d595944f *inst/include/later.h
+d676c48a143f816241182f11c7f733ee *inst/doc/later-cpp.html
+2f2dcc8a3a9d1235ca40b4a2f5a9c142 *inst/include/later.h
 0a3558e69c0e62bf0024f934f2254ae2 *inst/include/later_api.h
 f6132a7bbcc21d7a05298c7bad6a46ca *man/create_loop.Rd
 c7a4ed3341b448160cde2b39223e36f5 *man/later.Rd
@@ -37,7 +37,7 @@ c8cc41a9a77956e589d18c37afb198e2 *src/callback_registry.h
 5cbaf1b9d125bd17caae7f641f181433 *src/init.c
 56792fc6e11c596d958add3d2ce86743 *src/interrupt.h
 b8827dba315803c306cbe72b19cc2701 *src/later.cpp
-28ad43027f7342ad53e46285979d63ad *src/later.h
+0dddd024f52e2185d45032489d71f2a4 *src/later.h
 9b7187fc5a953ea41b46f9a462b53cb2 *src/later_posix.cpp
 5535f33042c80132c23ff6549c9facbb *src/later_win32.cpp
 08957a476d21528caa9d160f2c7b1159 *src/optional.h
@@ -55,7 +55,7 @@ ad56b217c12e12792e86edc5617b082c *src/tinycthread.h
 2a6ba3531351afef10fb5e7dc4d8c77b *tests/testthat.R
 c3e5ee58b5d7e1e4c89c82a02b19287c *tests/testthat/test-c-api.R
 c75627b4bc39c2b3589483afaeab5d52 *tests/testthat/test-cancel.R
-ba9449d5a3fb8dfefc17b5ed39478304 *tests/testthat/test-later-fd.R
+31a22e14ed7f5c9bdfeb2fa8a10779a5 *tests/testthat/test-later-fd.R
 0eaf9b5bc4889a1c1271080a214d9426 *tests/testthat/test-private-loops.R
 5f8ee8021a653437300420c4d323d94f *tests/testthat/test-run_now.R
 88133661f44a9f8a51e06a1d8b044372 *vignettes/later-cpp.Rmd

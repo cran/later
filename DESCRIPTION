@@ -2,7 +2,7 @@ Package: later
 Type: Package
 Title: Utilities for Scheduling Functions to Execute Later with Event
         Loops
-Version: 1.4.0
+Version: 1.4.1
 Authors@R: c(
     person("Winston", "Chang", role = c("aut", "cre"), email = "winston@posit.co"),
     person("Joe", "Cheng", role = c("aut"), email = "joe@posit.co"),
@@ -24,7 +24,7 @@ Suggests: knitr, nanonext, R6, rmarkdown, testthat (>= 2.1.0)
 VignetteBuilder: knitr
 Encoding: UTF-8
 NeedsCompilation: yes
-Packaged: 2024-11-25 22:01:20 UTC; jcheng
+Packaged: 2024-11-27 22:51:17 UTC; jcheng
 Author: Winston Chang [aut, cre],
   Joe Cheng [aut],
   Charlie Gao [aut] (<https://orcid.org/0000-0002-0750-061X>),
@@ -35,4 +35,4 @@ Author: Winston Chang [aut, cre],
     https://tinycthread.github.io/)
 Maintainer: Winston Chang <winston@posit.co>
 Repository: CRAN
-Date/Publication: 2024-11-26 08:50:01 UTC
+Date/Publication: 2024-11-27 23:40:02 UTC
